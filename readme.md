@@ -81,6 +81,8 @@ for i in 0..num_frames {
 
 ```
 
+The GROUP_ID is completely optional to use. If you leave it empty, prints will just add to the bottom of timeline like regular behavior.
+
 ### Sharing
 
 When your project outputs prints, the app will store them to disk and index them. This creates a folder with binary files on your computer. By sharing this folder, you can easily give it to someone else for inspection without they having to recalculate any of the data.
