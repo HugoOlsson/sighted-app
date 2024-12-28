@@ -57,8 +57,10 @@ In Sighted, the term **"print"** is used a bit differently then normal. Here, pr
 
 ### Groups
 
-<img src="media/groups1.jpg" alt="Example Point Cloud" height="300"/>
-<img src="media/groups2.jpg" alt="Example Grid Data" height="300"/>
+<p float="left">
+<img src="media/groups1.jpg" alt="Example Point Cloud" height="270"/>
+<img src="media/groups2.jpg" alt="Example Grid Data" height="270"/>
+</p>
 
 ### Inspection
 
