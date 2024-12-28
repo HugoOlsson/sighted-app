@@ -7,7 +7,7 @@
 
 <img src="media/sighted-logo.png" alt="Project Demo" width="200"/>
 
-Sighted is a project that will allow data, texts and plots of different kinds to be printed/plotted easily and performantly from any language.
+Sighted is a project that will allow data, texts and plots of different kinds to be printed/plotted easily and performant from any language.
 
 In Sighted, the term **"print"** is used a bit differently then normal. Here, print is a generic verb for showing data of any kind. Texts, Errors, 3d-plots, Heatmaps, Tables etc.
 
@@ -29,9 +29,11 @@ In Sighted, the term **"print"** is used a bit differently then normal. Here, pr
 - **GPU-Accelerated Prints For Super Fast Complex Visualizations**
 - **Format to Efficiently Share Prints With Others**
 
-<img src="media/lines-noise.gif" alt="Example Lines" width="400"/>
-<img src="media/cloud.gif" alt="Example Point Cloud" width="400"/>
-<img src="media/interference.gif" alt="Example Grid Data" width="400"/>
+<p float="left">
+  <img src="media/lines-noise.gif" alt="Example Lines" width="350"/>
+  <img src="media/cloud.gif" alt="Example Point Cloud" width="350"/>
+  <img src="media/interference.gif" alt="Example Grid Data" width="350"/>
+</p>
 
 ## Installation
 
@@ -45,9 +47,24 @@ In Sighted, the term **"print"** is used a bit differently then normal. Here, pr
 1. **"sighted_setup(...)"** connects your program to the Sighted app. This must thus be run before you can do any prints.
 2. **"sighted_wait()"** makes sure all the prints is finished or else will wait for them.
 3. **"sighted(...)"** is the generic function to print any data. This is like the regular **"print(...)"** but can take more types of data and is obvious to use the sighted system.
-4. **"text(...)"**, **"grid(...)"**, **"lines(...)"**, **"points3d(...)"** etc, are what you put inside the **"sighted(...)"** function. These acts like helper functions to bundle your data (of respective type) in the correct manner for the sighted pipeline. Think of it like this **"sighted(lines(YOUR LINES DATA), "")"** to print lines or **"sighted(points3d(YOUR POINTS DATA), "")"** to print your 3d-points data.
+4. **"text(...)"**, **"grid(...)"**, **"lines(...)"**, **"points3d(...)"** etc, are what you put inside the **"sighted(...)"** function. These act like helper functions to bundle your data (of respective type) in the correct manner for the sighted pipeline. Think of it like this **"sighted(lines(YOUR LINES DATA), "")"** to print lines or **"sighted(points3d(YOUR POINTS DATA), "")"** to print your 3d-points data.
 
-## Simple uses in Rust and Python
+## Fundamental Concepts
+
+### Projects
+
+### Timeline
+
+### Groups
+
+<img src="media/groups1.jpg" alt="Example Point Cloud" height="300"/>
+<img src="media/groups2.jpg" alt="Example Grid Data" height="300"/>
+
+### Inspection
+
+### Sharing
+
+### Simple uses in Rust and Python
 
 ```rust
 // Example in rust
@@ -325,13 +342,12 @@ The fundamental architecture is this:
 2. A data format that is easy to package data into, optimized for the printing use case.
 3. Making lightweight clients for languages to expose a few functions and bundle the print data to the data format.
 
-The app receives data from prints, which can come from any environment, even remote ones. It parses the data according to the binary format makes all actions to provide a good experience with viewing the printed data. This includes: grouping prints by ID, storing data to disk, drawing the prints in a performant way so the user easily can navigate the prints and inspect them.
+The app receives data from prints, which can come from any environment, even remote ones. It parses the data according to the binary format and makes all actions to provide a good experience with viewing the printed data. This includes: grouping prints by ID, producing an indexed and shareable binary, storing data to disk, drawing the prints in a performant way so the user easily can navigate the prints and inspect them.
 
 The data format is a binary format that is optimized for the operations that the app will do, but also to be very simple and easy to pack data into for the "lightweight clients".
 
-The cross language feature comes from the fact that the printing is separated from the language into a separate program and that communication to that uses a shared format. This enables printing functionality form any language just by making a lightweight client for it (or just providing bindings from an existing client). This is some work but much much less then building a rigorous plotting/printing/data management system for each language.
+The cross language feature comes from the fact that the printing is separated from the language into a separate program and that communication to it uses a shared format possible to pack into from any language. This enables printing functionality from multiple languages by making a client for from (or providing bindings from an existing client). This is some work but much much less then building a rigorous plotting/printing/data management system for each language.
 
-To build a client for a language, see the current implementations to build something equivalent, which should be pretty quick, or make bindings from the current Rust client to your preferred language. 
-
+To build a client for a language, see the current implementations to build something equivalent, which should be pretty quick, or make bindings from the current Rust client to your preferred language.
 
 Built by Hugo Olsson (internet alias Carl Hugo) ❤️.
