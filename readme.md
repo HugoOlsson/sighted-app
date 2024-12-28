@@ -14,9 +14,8 @@ In Sighted, the term **"print"** is used a bit differently then normal. Here, pr
 ## Who is this tool for?
 
 - **Coders that print to troubleshoot problems**
-- **Coders who would like to easily review prints from the execution, even if there are millions, without having a cluttered scrolling nightmare**
-- **Coders that are working in languages that typically have few/no ways to visualize what is happening**
 - **Coders that want the best solution of visualizing computations with interactive plots, and doing so from any language, not just Python**
+- **Coders who would like to easily review prints from the execution, even if there are millions, without having a cluttered scrolling nightmare**
 - **Coders that want their prints and plots the be stored, indexed, managed**
 - **Coders that would like to easily share prints/plots/logs/errors just by sharing a single file**
 
@@ -53,7 +52,11 @@ In Sighted, the term **"print"** is used a bit differently then normal. Here, pr
 
 ### Projects
 
+Sighted app is a single place for the output of all your projects. Therefore, when you initialize Sighted for your project, you give a "project name" for in which your prints will be contained.
+
 ### Timeline
+
+In a project, prints are stored "softly chronological"[1] in a vertical timeline, similar to how it is in a chatbot like ChatGPT. You scroll up to see history.
 
 ### Groups
 
@@ -62,9 +65,25 @@ In Sighted, the term **"print"** is used a bit differently then normal. Here, pr
 <img src="media/groups2.jpg" alt="Example Grid Data" height="270"/>
 </p>
 
-### Inspection
+Often times, prints belong together. It can be error messages from a certain function, state snapshots from a loop or different time frames from a calculation. These can be viewed together in place by providing a GROUP_ID to the print, like this:
+
+```rust
+// Print 3d-points
+for i in 0..num_frames {
+  let points = // Do calculations for the frame this time step
+
+  // Print the points for the frame with a GROUP_ID, 
+  // then the points printed form the coming iterations in the simulation will also have this ID and they will be grouped and played like an animation in the app.
+  sighted(points3d(&points), "fluid-simulation");
+}
+
+```
 
 ### Sharing
+
+When your project outputs prints, the app will store them to disk and index them. This creates a folder with binary files on your computer. By sharing this folder, you can easily give it to someone else for inspection without they having to recalculate any of the data.
+
+This is very useful if errors are found which might be hard to reproduce, and you want to share your captured timeline of prints with your coworkers. Or maybe if you are working on a heavy physics simulation that takes hours to rerun, then you can share your prints to others so they can interact with the produced print without having to rerun the simulation.
 
 ### Simple uses in Rust and Python
 
@@ -353,3 +372,7 @@ The cross language feature comes from the fact that the printing is separated fr
 To build a client for a language, see the current implementations to build something equivalent, which should be pretty quick, or make bindings from the current Rust client to your preferred language.
 
 Built by Hugo Olsson (internet alias Carl Hugo) ❤️.
+
+## Marks
+
+- [1]: With softly chronological it means that the prints will be stored in chronological order, but if using GROUP_IDs, then a print might be added to a group that isn't strictly the latest in the timeline (but still latest version of that group), and thus only "softly chronological".
