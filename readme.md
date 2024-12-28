@@ -7,9 +7,9 @@
 
 <img src="media/sighted-logo.png" alt="Project Demo" width="200"/>
 
-Sighted is a project that will allow data, texts and plots of different kinds to be printed/plotted easily and performant from any language.
+Sighted enables effortless and high-performance printing and plotting of data, text, and visualizations from any programming language.
 
-In Sighted, the term **"print"** is used a bit differently then normal. Here, print is a generic verb for showing data of any kind. Texts, Errors, 3d-plots, Heatmaps, Tables etc.
+In Sighted, the term **"print"** is used a bit differently then normal. Here, print is a generic verb for showing data of any kind. Texts, Errors, 3d-plots, Heatmaps, line charts, Tables etc.
 
 ## Who is this tool for?
 
@@ -32,6 +32,8 @@ In Sighted, the term **"print"** is used a bit differently then normal. Here, pr
   <img src="media/lines-noise.gif" alt="Example Lines" width="350"/>
   <img src="media/cloud.gif" alt="Example Point Cloud" width="350"/>
   <img src="media/interference.gif" alt="Example Grid Data" width="350"/>
+  <img src="media/waves3d.gif" alt="Example Grid Data" width="350"/>
+  <img src="media/scrolling.gif" alt="Example Grid Data" width="350"/>
 </p>
 
 ## Installation
@@ -371,7 +373,7 @@ The cross language feature comes from the fact that the printing is separated fr
 
 To build a client for a language, see the current implementations to build something equivalent, which should be pretty quick, or make bindings from the current Rust client to your preferred language.
 
-Built by Hugo Olsson (internet alias Carl Hugo) ❤️.
+Built by Hugo Olsson (internet alias Carl Hugo) 🤍.
 
 ## Marks
 
