@@ -29,9 +29,9 @@ In Sighted, the term **"print"** is used a bit differently then normal. Here, pr
 - **GPU-Accelerated Prints For Super Fast Complex Visualizations**
 - **Format to Efficiently Share Prints With Others**
 
-<img src="media/lines-noise.gif" alt="Example Lines" width=300/>
-<img src="media/cloud.gif" alt="Example Point Cloud" width=300/>
-<img src="media/interference.gif" alt="Example Grid Data" width=300/>
+<img src="media/lines-noise.gif" alt="Example Lines" width="300"/>
+<img src="media/cloud.gif" alt="Example Point Cloud" width="300"/>
+<img src="media/interference.gif" alt="Example Grid Data" width="300"/>
 
 ## Installation
 
