@@ -5,7 +5,7 @@
 
 ### Print data and visualizations in one place from any programming language.
 
-<img src="media/sighted-logo.png" alt="Project Demo" width=200/>
+<img src="media/sighted-logo.png" alt="Project Demo" width="200"/>
 
 Sighted is a project that will allow data, texts and plots of different kinds to be printed/plotted easily and performantly from any language.
 
@@ -29,9 +29,9 @@ In Sighted, the term **"print"** is used a bit differently then normal. Here, pr
 - **GPU-Accelerated Prints For Super Fast Complex Visualizations**
 - **Format to Efficiently Share Prints With Others**
 
-<img src="media/lines-noise.gif" alt="Example Lines" width="300"/>
-<img src="media/cloud.gif" alt="Example Point Cloud" width="300"/>
-<img src="media/interference.gif" alt="Example Grid Data" width="300"/>
+<img src="media/lines-noise.gif" alt="Example Lines" width="400"/>
+<img src="media/cloud.gif" alt="Example Point Cloud" width="400"/>
+<img src="media/interference.gif" alt="Example Grid Data" width="400"/>
 
 ## Installation
 
